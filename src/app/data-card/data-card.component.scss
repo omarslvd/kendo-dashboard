@@ -1,0 +1,117 @@
+.population-stats__world {
+  background: white;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  flex: 1 1;
+  flex-direction: column;
+  width: 350px;
+  border-radius: 5px;
+
+  &-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__heading {
+      .k-icon {
+        color: #7B84FF;
+        margin-right: 5px;
+        font-size: 16px;
+      }
+
+      font-size: 12px;
+      font-family: Montserrat, sans-serif;
+      text-transform: uppercase;
+      font-weight: 400;
+      opacity: .7;
+      margin: 0;
+    }
+
+    &__sub-heading{
+      margin: 0;
+      font-size: 11px;
+      font-weight: bold;
+      opacity: 0.6;
+      text-transform: uppercase;
+    }
+
+  }
+
+  &-body {
+    padding: 60px 15px 60px;
+
+    &__changes {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+
+      p:nth-child(1) {
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        opacity: 0.5;
+      }
+
+      p:nth-child(2) {
+        .k-icon {
+          color: lightseagreen;
+        }
+
+        .k-icon.red{
+          color: indianred;
+        }
+
+        .k-icon.grey{
+          color: coral;
+        }
+
+        font-size: 12px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    h3 {
+      text-align: center;
+      font-weight: 400;
+      font-size: 30px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      color: #525F7F;
+    }
+  }
+
+  &-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 3px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      .k-icon {
+        color: #7B84FF;
+        margin-right: 4px;
+        font-size: 14px;
+      }
+
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: rgba(0, 0, 0, 0.3);
+      font-weight: 600;
+    }
+
+    h4 {
+      margin: 0;
+      color: #525F7F;
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+    }
+  }
+}

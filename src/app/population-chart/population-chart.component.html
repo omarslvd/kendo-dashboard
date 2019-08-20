@@ -1,0 +1,34 @@
+<section>
+    <div class="header">
+      <h4>World Population Last 6 years</h4>
+    </div>
+    <kendo-chart
+      [seriesColors]="[
+        'rgba(239, 237, 238, 1)',
+        'rgba(249, 171, 12, 1)',
+        'rgba(0, 112, 192, 1)',
+        'rgba(8, 61, 119, 1)',
+        ' rgba(218, 65, 103, 1)',
+        '#E895FC'
+      ]"
+    >
+      <kendo-chart-series>
+        <kendo-chart-series-item
+          type="pie"
+          [data]="populationData"
+          categoryField="year"
+          field="population"
+        >
+          <kendo-chart-series-item-labels
+            [content]="labelContent"
+            color="#7B84FF"
+            background="white"
+            [font]="'Montserrat'"
+            [style.height]="'500px'"
+          >
+          </kendo-chart-series-item-labels>
+        </kendo-chart-series-item>
+      </kendo-chart-series>
+      <kendo-chart-legend [visible]="true" position="bottom"></kendo-chart-legend>
+    </kendo-chart>
+  </section>

@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+$accent: #7B84FF;
+$accent-light: #DBDDFF;
+$border-radius: 5px;
+$base-text: #525F7F;
+
+@import "~@progress/kendo-theme-default/scss/grid";
+@import "~@progress/kendo-theme-default/scss/dropdownlist";
+@import "~@progress/kendo-theme-default/scss/dropdowntree";
+
+
+body, html {
+  margin: 0;
+  background: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+}
+
+.k-chart-surface {
+  height: 500px;
+  font-family: 'Montserrat', sans-serif !important;
+}

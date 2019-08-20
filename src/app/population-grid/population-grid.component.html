@@ -1,0 +1,57 @@
+<section>
+  <div class="header">
+    <h4>Age based population of all countries</h4>
+    <div class="filter">
+      <div class="filter-age">
+        <p>Age:</p>
+        <kendo-dropdownlist
+          [data]="ages"
+          [value]="currentAge"
+          (valueChange)="onAgeChange($event)"
+        >
+        </kendo-dropdownlist>
+      </div>
+      <div class="filter-year">
+        <p>Year:</p>
+        <kendo-dropdownlist
+          [data]="years"
+          [value]="currentYear"
+          (valueChange)="onYearChange($event)"
+        >
+        </kendo-dropdownlist>
+      </div>
+    </div>
+  </div>
+  <kendo-grid
+    [kendoGridBinding]="populationData"
+    [height]="510"
+    [pageable]="{
+      buttonCount: buttonCount,
+      info: info,
+      type: type,
+      pageSizes: [10, 20, 30],
+      previousNext: previousNext
+    }"
+    [sortable]="true"
+    [groupable]="true"
+    [filterable]="true"
+    [pageSize]="20"
+  >
+    <kendo-grid-column field="country"> </kendo-grid-column>
+    <kendo-grid-column field="females">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <div>{{ dataItem.females | number }}</div>
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="males">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <div>{{ dataItem.males | number }}</div>
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column field="total">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        <div>{{ dataItem.total | number }}</div>
+      </ng-template>
+    </kendo-grid-column>
+  </kendo-grid>
+</section>
